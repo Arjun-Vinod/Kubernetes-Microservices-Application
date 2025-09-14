@@ -13,8 +13,8 @@ spec:
   template:
     metadata:
       name: python-pod
-        labels:
-          type: voting-app
+      labels:
+        type: voting-app
     spec:
       containers:
         - name: voting-app

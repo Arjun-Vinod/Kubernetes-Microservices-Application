@@ -1,4 +1,4 @@
-apiVesrion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-deployment
@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      type: cache
+      type: in-memory-db
   template:
     metadata:
       name: redis-pod

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: .net-deployment
+  labels:
+    type: worker-app
+spec:
+  selector:
+    matchLabels:
+      type: worker-app
+  template:
+    metadata:
+      name: .net-pod
+      labels:
+        type: worker-app
+    spec:
+      containers:
+        - name: worker-app
+          image: dockersamples/examplevotingapp_worker
+...

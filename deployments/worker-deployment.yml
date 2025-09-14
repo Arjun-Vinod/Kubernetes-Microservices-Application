@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: .net-deployment
+  name: worker-deployment
   labels:
     type: worker-app
 spec:
@@ -10,7 +10,7 @@ spec:
       type: worker-app
   template:
     metadata:
-      name: .net-pod
+      name: worker-pod
       labels:
         type: worker-app
     spec:
